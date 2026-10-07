@@ -1,0 +1,12 @@
+{
+  "name": "simple-blog",
+  "version": "1.0.0",
+  "description": "A simple static blogging website served with Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <span class="logo">My Blog</span>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#write">Write</a>
+            <a href="#postList">Posts</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>My Simple Blog</h1>
+        <p>Thoughts, stories and ideas</p>
+    </header>
+
+    <main>
+        <section class="submit-form" id="write">
+            <h2>Write a New Post</h2>
+            <form id="postForm">
+                <label for="titleInput">Title</label>
+                <input type="text" id="titleInput" placeholder="Enter post title" required maxlength="60">
+
+                <label for="contentInput">Content</label>
+                <textarea id="contentInput" rows="5" cols="40" placeholder="Write your post here..." required></textarea>
+                <label for="categoryInput">Category</label>
+<select id="categoryInput">
+    <option value="Thoughts">Thoughts</option>
+    <option value="Ideas">Ideas</option>
+    <option value="Stories">Stories</option>
+</select>
+
+                <label for="imageInput">Image (optional)</label>
+                <input type="file" id="imageInput" accept="image/*">
+
+                <input type="submit" id="submitBtn" value="Publish Post">
+                <button type="reset" id="resetBtn">Reset</button>
+            </form>
+        </section>
+        <div class="backup-bar">
+    <button id="exportBtn">⬇ Export Posts</button>
+    <label for="importInput" class="import-label">⬆ Import Posts</label>
+    <input type="file" id="importInput" accept=".json" class="hidden">
+</div>
+        <div class="filter-bar">
+    <button class="filter-btn active" data-category="All">All</button>
+    <button class="filter-btn" data-category="Thoughts">Thoughts</button>
+    <button class="filter-btn" data-category="Ideas">Ideas</button>
+    <button class="filter-btn" data-category="Stories">Stories</button>
+</div>
+
+        <div id="postList" class="post-list"></div>
+
+        <div id="fullPost" class="full-post hidden">
+            <button id="backBtn">&larr; Back to all posts</button>
+            <h2 id="fullTitle"></h2>
+            <p id="fullMeta"></p>
+            <img id="fullImage" class="post-image hidden" alt="">
+            <p id="fullContent"></p>
+        </div>
+
+        <section class="about" id="about">
+            <div class="avatar">&#9997;</div>
+            <div>
+                <h2>About Me</h2>
+                <p>Hi, I'm You. I write about the things I'm learning, building and thinking about. Thanks for stopping by!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Blog. All rights reserved.</p>
+        <p>
+            <a href="#" target="_blank">Instagram</a> ·
+            <a href="#" target="_blank">GitHub</a> ·
+            <a href="#" target="_blank">Twitter</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
